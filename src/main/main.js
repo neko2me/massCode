@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron'
+import { BrowserWindow, shell } from 'electron'
 import store from './store'
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -57,6 +57,11 @@ function createMainWindow () {
   mainWindow.on('closed', e => {
     mainWindow = null
   })
+
+  mainWindow.webContents.on('new-window', (event, url) => {
+    event.preventDefault()
+    shell.openExternal(url)
+  })ぃ
 }
 
 export { createMainWindow, mainWindow }

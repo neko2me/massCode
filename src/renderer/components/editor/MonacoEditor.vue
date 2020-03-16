@@ -218,8 +218,7 @@ export default {
         contextmenu: false,
         scrollBeyondLastLine: false,
         renderWhitespace: this.preferences.renderWhitespace,
-        wordWrap: this.preferences.wordWrap,
-        links: false
+        wordWrap: this.preferences.wordWrap
       })
       // Обновление опций
       this.editor.getModel().updateOptions({
