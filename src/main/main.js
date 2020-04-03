@@ -61,7 +61,7 @@ function createMainWindow () {
   mainWindow.webContents.on('new-window', (event, url) => {
     event.preventDefault()
     shell.openExternal(url)
-  })ぃ
+  })
 }
 
 export { createMainWindow, mainWindow }
